@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "c6aeef3e-f6a9-44d3-9671-d134921ccca3",
+		"name": "restro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26906545"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "dev3",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dev3@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dev@123",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "dev3",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add restro",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "beea3c2f-7a2c-4da2-9574-798c52663576"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token bb7c528904d19897c5f3c7dd436218347935d1153fa4bf95",
+						"uuid": "0c710bc8-82ab-436a-8d8e-7a4ff42a4af9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"vaibhav cafe\",\r\n    \"address\": \" bangalore \",\r\n    \"phone\": \"+912345678901\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/common/addrestro/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"common",
+						"addrestro",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restro list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "a6f5d3c9-5d38-456a-ab7f-5ca40ed726fc"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token bb7c528904d19897c5f3c7dd436218347935d1153fa4bf95",
+						"uuid": "26bedc7b-f79c-4b2e-ac98-6906a2aea78d"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/common/restrolist/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"common",
+						"restrolist",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete restro",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "d473ca1c-8e6f-4288-87d2-c50e176b3629"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token bb7c528904d19897c5f3c7dd436218347935d1153fa4bf95",
+						"uuid": "256b2e1d-cc1d-454d-811c-ce5b69372e56"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/common/deleterestro/?id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"common",
+						"deleterestro",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update restro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "a5a60a44-7fd0-4318-a32d-a897f592d802"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token bb7c528904d19897c5f3c7dd436218347935d1153fa4bf95",
+						"uuid": "940440e9-3ab0-4601-a8b3-7f69b598022e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"wow cafe\",\r\n    \"address\": \" bangalore \",\r\n    \"phone\": \"+912345672351\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/common/updaterestro/?id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"common",
+						"updaterestro",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "34144211-d91c-43be-b09a-22e73f9b35bb"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
